@@ -90,6 +90,13 @@ body {
     text-decoration: none;
     border-radius: 5px;
     width: 80%;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-button.secondary {
+    background-color: #444;
 }
 
 .modal-button:hover {
