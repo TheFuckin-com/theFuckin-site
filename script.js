@@ -1,8 +1,8 @@
 const quotes = [
-    "One-of-a-kind.",
-    "Global shock appeal.",
-    "Off the market for 20 years.",
-    "Use it for whatever the fuck you want."
+    "“One-of-a-kind.”",
+    "“Global shock appeal.”",
+    "“Off the market for 20 years.”",
+    "“Use it for whatever the fuck you want.”"
 ];
 
 let current = 0;
@@ -19,17 +19,27 @@ if (quoteEl) {
     }, 3000);
 }
 
-function openModal() {
-    document.getElementById("offerModal").style.display = "block";
+// Modal logic
+function openMainModal() {
+    document.getElementById("mainModal").style.display = "block";
 }
 
-function closeModal() {
-    document.getElementById("offerModal").style.display = "none";
+function closeMainModal() {
+    document.getElementById("mainModal").style.display = "none";
+}
+
+function openFormModal() {
+    closeMainModal();
+    document.getElementById("formModal").style.display = "block";
+}
+
+function closeFormModal() {
+    document.getElementById("formModal").style.display = "none";
 }
 
 window.onclick = function (event) {
-    const modal = document.getElementById("offerModal");
-    if (event.target === modal) {
-        closeModal();
-    }
+    const mainModal = document.getElementById("mainModal");
+    const formModal = document.getElementById("formModal");
+    if (event.target === mainModal) closeMainModal();
+    if (event.target === formModal) closeFormModal();
 };
