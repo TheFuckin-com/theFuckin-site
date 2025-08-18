@@ -19,7 +19,6 @@ if (quoteEl) {
     }, 3000);
 }
 
-// Modal logic
 function openModal() {
     document.getElementById("offerModal").style.display = "block";
 }
